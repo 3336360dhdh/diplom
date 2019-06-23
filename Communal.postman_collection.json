@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "b0ce88de-981b-411c-8cdd-2d14a4eb2405",
+		"name": "Communal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/user?phone=933336363&password=123",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "933336363"
+								},
+								{
+									"key": "password",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\n   \"fullName\":\"Jabboorov Sherzod\",\n    \"phone\":\"933336363\",\n    \"address\":\"Toshkent\",\n     \"password\":\"123\",\n   \"gas\":\"123123\",\n    \"water\":\"3124321\",\n    \"electr\":\"1233312\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}//user/all-users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"",
+								"user",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Price",
+			"item": [
+				{
+					"name": "CreatePrice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"gasPrice\":127,\n\"waterPrice\":1000,\n\"electrPrice\":240\n}"
+						},
+						"url": {
+							"raw": "{{host}}/price",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPriceList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/price/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"price",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCurrentPrice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/price/current",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"price",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPrice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/price?id=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"price"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Communal",
+			"item": [
+				{
+					"name": "GetCommunal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/communal?id=3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"communal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pay",
+			"item": [
+				{
+					"name": "CommunalsPay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"sumPrice\":320000,\n\"id\":2\n}"
+						},
+						"url": {
+							"raw": "{{host}}/pay",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getListHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/pay/list?communalId=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pay",
+								"list"
+							],
+							"query": [
+								{
+									"key": "communalId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0e58e9c0-7a4f-403d-bd29-1bb069623a28",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a974c5bb-1f41-426c-9152-94c2568de6b4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2b72de47-464f-49c6-bac5-616d68518f94",
+			"key": "host",
+			"value": "localhost:8888",
+			"type": "string"
+		}
+	]
+}

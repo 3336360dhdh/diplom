@@ -1,0 +1,31 @@
+spring:
+  main.allow-bean-definition-overriding: true
+#  jpa:
+#    open-in-view: false
+#    show-sql: false
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#      ddl-auto: update
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:file:./communal-db;DB_CLOSE_ON_EXIT=FALSE
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    database: ORACLE
+  datasource:
+    url: jdbc:oracle:thin:@192.168.0.120:1521:orcl
+    username: db_communal
+    password: 123
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+server:
+  port: 8888
+hashids:
+  salt: "eYKM+jt6N!^LZ#au*?Eav$@YJdhSx=kt"
+  minLength: 5
+  alphabet: qewathgbvmcdxlepfz1234567890

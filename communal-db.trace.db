@@ -1,0 +1,6 @@
+2019-05-21 09:39:29 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP *[*] FROM USER"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP * FROM USER [42001-199]
+2019-05-21 09:40:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE *[*] FROM USER WHERE ID =2 "; expected "identifier"; SQL statement:
+DELETE * FROM USER where id =2 [42001-199]
